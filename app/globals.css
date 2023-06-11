@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.container li {
+	flex: 1 0 100%;
+	margin-bottom: 1rem;
+}
+
+.hover-underline {
+	position: relative;
+}
+
+.hover-underline__line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: blue;
+	transition: all 0.3s;
+}
+
+.hover-underline:hover .hover-underline__line {
+	width: 100%;
+}
+
+@layer components {
+	.menu {
+		@apply fixed top-0 left-0 h-[100%] w-[100%] bg-accent px-10 hidden z-10;
+	}
+
+	.show-menu {
+		@apply flex;
+	}
+
+	.custom-transition {
+		@apply transition duration-150 ease-in-out;
+	}
+
+	.bg-small {
+		@apply bg-accent rounded-lg px-3 mr-4 sm:text-sm md:text-base border flex flex-row items-center gap-1;
+	}
+}
