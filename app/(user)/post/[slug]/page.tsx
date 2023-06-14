@@ -164,9 +164,7 @@ const Post = ({ params: { slug } }: Props) => {
 				</section>
 
 				<section className="text-secondary sm:text-xs sm:px-8 md:px-28 md:text-lg">
-					<p className="">
-						<PortableText value={post.body} components={RichTextComponents} />
-					</p>
+					<PortableText value={post.body} components={RichTextComponents} />
 				</section>
 				{/* SOCIAL MEDIA SHARE */}
 				<section className="flex flex-col items-center justify-center my-4">

@@ -52,7 +52,7 @@ const Navbar = () => {
 						className="h-[2.8rem] hover:text-accent2 delay-150 transition hover:border"
 					/>
 				</Link>
-				<button onClick={toggleMenu}>
+				<div onClick={toggleMenu}>
 					<CgMenuRightAlt className="w-10 h-10 cursor-pointer hover:text-accent2 delay-150 transition hover:border" />
 
 					<div className={mobileMenu ? "show-menu menu" : "menu"}>
@@ -74,7 +74,7 @@ const Navbar = () => {
 							<TiTimes className="w-10 h-10 cursor-pointer absolute top-6 right-3 hover:text-accent2 delay-150 transition hover:border" />
 						</button>
 					</div>
-				</button>
+				</div>
 			</div>
 		</nav>
 	);
