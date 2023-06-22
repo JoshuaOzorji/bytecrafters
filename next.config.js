@@ -4,7 +4,13 @@ const nextConfig = {
 		appDir: true,
 	},
 	images: {
-		domains: ["cdn.sanity.io"],
+		domains: [
+			"cdn.sanity.io",
+			"https://sanity.io",
+			"https://vercel.app",
+			"https://vercel.com",
+			"https://vercel.io",
+		],
 	},
 };
 
