@@ -28,6 +28,12 @@ yarn-error.log*
 .env*.local
 .env
 
+*.env
+*.env.example
+*.env.local
+*.env.staging
+
+
 # vercel
 .vercel
 
