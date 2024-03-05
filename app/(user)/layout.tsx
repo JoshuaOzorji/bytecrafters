@@ -31,7 +31,7 @@ export default function RootLayout({
 		<html lang='en' className={`${ubuntu.variable} ${abel.variable}`}>
 			<body>
 				<Navbar />
-				<div className='bg-accent1 pb-6'>{children}</div>
+				<div className='bg-accent1 pb-5'>{children}</div>
 				<Footer />
 			</body>
 		</html>
