@@ -3,6 +3,7 @@ import { client } from "../../sanity/lib/client";
 import PreviewSuspense from "next-sanity/preview";
 import Bloglist from "@/components/Bloglist";
 import Subscription from "@/components/Subscription";
+
 const query = groq`
 *[_type=='post'] {
 	...,
@@ -17,7 +18,7 @@ async function HomePage() {
 	return (
 		<div>
 			<Bloglist posts={posts} />
-			<div className="md:mx-28">
+			<div className='md:mx-28'>
 				<Subscription />
 			</div>
 		</div>

@@ -6,7 +6,7 @@ import ClientSideRoute from "./ClientSideRoute";
 import { calculateReadTime } from "./utils";
 import { FiGrid } from "react-icons/fi";
 import { CiClock2 } from "react-icons/ci";
-import Subscription from "./Subscription";
+
 type Props = {
 	posts: Post[];
 };
