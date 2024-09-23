@@ -13,7 +13,8 @@ const query = groq`
 export const revalidate = 60;
 
 async function HomePage() {
-	const posts = await client.fetch(query);
+	const posts = await client.fetch();
+
 	return (
 		<div>
 			<Bloglist posts={posts} />
