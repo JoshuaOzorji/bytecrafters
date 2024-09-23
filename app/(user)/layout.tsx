@@ -28,10 +28,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={`${ubuntu.variable} ${abel.variable}`}>
+		<html
+			lang='en'
+			className={`${ubuntu.variable} ${abel.variable}`}>
 			<body>
 				<Navbar />
-				<div className="bg-accent1 pb-20">{children}</div>
+				<div className='pb-20 bg-accent1'>
+					{children}
+				</div>
 				<Footer />
 			</body>
 		</html>

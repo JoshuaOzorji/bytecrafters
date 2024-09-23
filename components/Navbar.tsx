@@ -20,20 +20,22 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="font-ubuntu text-lg text-primary ">
-			<div className="sm:hidden md:flex flex-row justify-between items-center shadow-md px-14 fixed top-0 left-0 right-0 bg-white z-50">
-				<Link href="/">
+		<nav className='text-lg font-ubuntu text-primary '>
+			<div className='fixed top-0 left-0 right-0 z-50 flex-row items-center justify-between bg-white shadow-md sm:hidden md:flex px-14'>
+				<Link href='/'>
 					<Image
-						alt="logo"
+						alt='logo'
 						src={Logo}
 						width={60}
 						height={40}
-						className="h-12 hover:text-accent2 delay-150 transition hover:border"
+						className='h-12 transition delay-150 hover:text-accent2 hover:border'
 					/>
 				</Link>
-				<div className="flex flex-row gap-4 font-extrabold text-primary font-abel py-6 text-xl">
+				<div className='flex flex-row gap-4 py-6 text-xl font-extrabold text-primary font-abel'>
 					{links.map((link) => (
-						<ClientSideRoute key={link.id} route={link.url}>
+						<ClientSideRoute
+							key={link.id}
+							route={link.url}>
 							{link.text}
 						</ClientSideRoute>
 					))}
@@ -42,36 +44,54 @@ const Navbar = () => {
 
 			{/* MOBILE MENU */}
 
-			<div className="md:hidden sm:flex flex-row justify-between items-center shadow-md px-2 py-4 fixed top-0 left-0 right-0 bg-white z-50">
-				<Link href="/">
+			<div className='fixed top-0 left-0 right-0 z-50 flex-row items-center justify-between px-2 py-4 bg-white shadow-md md:hidden sm:flex'>
+				<Link href='/'>
 					<Image
-						alt="logo"
+						alt='logo'
 						src={Logo}
 						width={60}
 						height={40}
-						className="h-[2.8rem] hover:text-accent2 delay-150 transition hover:border"
+						className='h-[2.8rem] hover:text-accent2 delay-150 transition hover:border'
 					/>
 				</Link>
 				<div onClick={toggleMenu}>
-					<CgMenuRightAlt className="w-10 h-10 cursor-pointer hover:text-accent2 delay-150 transition hover:border" />
+					<CgMenuRightAlt className='w-10 h-10 transition delay-150 cursor-pointer hover:text-accent2 hover:border' />
 
-					<div className={mobileMenu ? "show-menu menu" : "menu"}>
-						<div className="font-abel font-semibold">
+					<div
+						className={
+							mobileMenu
+								? "show-menu menu"
+								: "menu"
+						}>
+						<div className='font-semibold font-abel'>
 							{links.map((link) => {
-								const { id, url, text } = link;
+								const {
+									id,
+									url,
+									text,
+								} = link;
 								return (
 									<div
-										key={id}
+										key={
+											id
+										}
 										w-full
-										className="text-primary hover:text-hover:text-underline mt-10 text-left">
-										<Link href={url}>{text}</Link>
+										className='mt-10 text-left text-primary hover:text-hover:text-underline'>
+										<Link
+											href={
+												url
+											}>
+											{
+												text
+											}
+										</Link>
 									</div>
 								);
 							})}
 						</div>
 
 						<button onClick={toggleMenu}>
-							<TiTimes className="w-10 h-10 cursor-pointer absolute top-6 right-3 hover:text-accent2 delay-150 transition hover:border" />
+							<TiTimes className='absolute w-10 h-10 transition delay-150 cursor-pointer top-6 right-3 hover:text-accent2 hover:border' />
 						</button>
 					</div>
 				</div>
